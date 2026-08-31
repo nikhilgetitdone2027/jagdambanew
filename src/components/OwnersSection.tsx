@@ -65,6 +65,11 @@ export const OwnersSection: React.FC = () => {
                 <div className="text-center mb-4">
                   <h3 className="font-cinzel text-xl sm:text-2xl font-black text-[var(--theme-accent-light)] tracking-wide">
                     {founder.name}
+                    {isHaribansh(founder.name) && (
+                      <span className="text-xs sm:text-sm font-medium text-[var(--theme-accent)] block mt-0.5 sm:inline sm:ml-2">
+                        (Gold Medalist at CAI, Hyd.)
+                      </span>
+                    )}
                   </h3>
                   <div className="text-xs uppercase font-black tracking-widest text-[var(--theme-accent)] mt-1">
                     {founder.role}
@@ -148,6 +153,11 @@ export const OwnersSection: React.FC = () => {
                   <div className="text-center mb-3">
                     <h3 className="font-cinzel text-lg sm:text-xl font-black text-[var(--theme-accent-light)]">
                       {owner.name}
+                      {isHaribansh(owner.name) && (
+                        <span className="text-xs font-medium text-[var(--theme-accent)] block mt-0.5">
+                          (Gold Medalist at CAI, Hyd.)
+                        </span>
+                      )}
                     </h3>
                     <div className="text-xs uppercase font-black tracking-wider text-[var(--theme-accent)] mt-0.5">
                       {owner.role}
@@ -206,7 +216,7 @@ export const OwnersSection: React.FC = () => {
                 Culinary Portfolio & Profile
               </span>
               <h3 className="font-cinzel text-xl sm:text-2xl font-black text-[var(--theme-accent-light)] mt-0.5">
-                Haribansh Kumar Pandey
+                Haribansh Kumar Pandey <span className="text-sm font-medium text-[var(--theme-accent)]">(Gold Medalist at CAI, Hyd.)</span>
               </h3>
               <p className="text-xs text-[var(--theme-text-muted)] mt-1">
                 Culinary Arts Specialist • Hyderabad & Kolkata Industrial Track Record
