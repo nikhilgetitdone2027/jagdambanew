@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useEffect } from 'react';
 
 export interface ThemeTemplate {
-  id: 'obsidian';
+  id: 'royal_sapphire_palace';
   name: string;
   subtitle: string;
   description: string;
@@ -30,33 +30,33 @@ export interface ThemeTemplate {
   };
 }
 
-export const OBSIDIAN_TEMPLATE: ThemeTemplate = {
-  id: 'obsidian',
-  name: 'Obsidian & 24K Liquid Gold',
-  subtitle: 'Ultra-Modern Black-Tie & Royal Gala',
-  description: 'Velvet obsidian midnight black canvas contrasted against radiant 24K liquid mirror gold and crisp champagne accents.',
-  badge: 'Dark Luxury',
-  iconName: 'Gem',
+export const ROYAL_SAPPHIRE_PALACE_TEMPLATE: ThemeTemplate = {
+  id: 'royal_sapphire_palace',
+  name: 'Royal Sapphire Palace',
+  subtitle: 'Imperial Blue & Regal Gold Majesty',
+  description: 'Deep nocturnal sapphire tones paired with opulent royal gold filigree and glowing palace accents.',
+  badge: 'Imperial Luxury',
+  iconName: 'Crown',
   colors: {
-    primary: '#0B0B0E',
-    primaryDark: '#050507',
-    primarySurface: '#14141B',
-    primaryCard: '#1C1C26',
-    primaryHover: '#2A2A38',
-    accent: '#F5BD47',
-    accentLight: '#FFF3D1',
-    accentDark: '#C99318',
-    accentGlow: 'rgba(245, 189, 71, 0.4)',
-    canvasBg: '#0B0B0E',
-    canvasSurface: '#14141B',
-    textDark: '#F4F4F8',
-    textMuted: '#A2A2B6',
+    primary: '#080E1E',
+    primaryDark: '#04070F',
+    primarySurface: '#0E172F',
+    primaryCard: '#142247',
+    primaryHover: '#1B2E5E',
+    accent: '#D4AF37',
+    accentLight: '#FBE8A6',
+    accentDark: '#A68018',
+    accentGlow: 'rgba(212, 175, 55, 0.45)',
+    canvasBg: '#080E1E',
+    canvasSurface: '#0E172F',
+    textDark: '#F3F6FD',
+    textMuted: '#92A0C2',
   },
   previewColors: {
-    base: '#0B0B0E',
-    gold: '#F5BD47',
-    card: '#1C1C26',
-    accent: '#FFF3D1',
+    base: '#080E1E',
+    gold: '#D4AF37',
+    card: '#142247',
+    accent: '#2563EB',
   },
 };
 
@@ -65,20 +65,20 @@ interface ThemeContextType {
 }
 
 const ThemeContext = createContext<ThemeContextType>({
-  currentTemplate: OBSIDIAN_TEMPLATE,
+  currentTemplate: ROYAL_SAPPHIRE_PALACE_TEMPLATE,
 });
 
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   useEffect(() => {
-    // Reset stored theme to obsidian
+    // Reset stored theme to royal_sapphire_palace
     try {
-      localStorage.setItem('jagadamba_theme_template', 'obsidian');
+      localStorage.setItem('jagadamba_theme_template', 'royal_sapphire_palace');
     } catch {
       // Ignore storage errors
     }
 
     const root = document.documentElement;
-    const { colors } = OBSIDIAN_TEMPLATE;
+    const { colors } = ROYAL_SAPPHIRE_PALACE_TEMPLATE;
 
     root.style.setProperty('--theme-primary', colors.primary);
     root.style.setProperty('--theme-primary-dark', colors.primaryDark);
@@ -100,7 +100,7 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   }, []);
 
   return (
-    <ThemeContext.Provider value={{ currentTemplate: OBSIDIAN_TEMPLATE }}>
+    <ThemeContext.Provider value={{ currentTemplate: ROYAL_SAPPHIRE_PALACE_TEMPLATE }}>
       {children}
     </ThemeContext.Provider>
   );
