@@ -108,16 +108,26 @@ export const VideoSection: React.FC = () => {
                     )
                   ) : (
                     <div className="relative w-full h-full">
-                      <img
-                        src={video.poster}
-                        alt={video.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 brightness-95"
-                        onError={(e) => {
-                          // Fallback poster if remote img fails
-                          const target = e.target as HTMLImageElement;
-                          target.src = '/images/decoration/outdoor-live-buffet.jpg';
-                        }}
-                      />
+                      {video.poster ? (
+                        <img
+                          src={video.poster}
+                          alt={video.title}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 brightness-95"
+                          onError={(e) => {
+                            // Fallback poster if remote img fails
+                            const target = e.target as HTMLImageElement;
+                            target.src = '/images/decoration/outdoor-live-buffet.jpg';
+                          }}
+                        />
+                      ) : (
+                        <video
+                          src={`${video.videoSrc}#t=0.5`}
+                          preload="metadata"
+                          muted
+                          playsInline
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 brightness-95"
+                        />
+                      )}
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
 
                       {/* Play Button Overlay */}

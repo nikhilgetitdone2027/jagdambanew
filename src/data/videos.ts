@@ -74,12 +74,11 @@ export const videosData: VideoItem[] = [
   },
   {
     id: 'vid-4',
-    title: 'Illuminated Night Ambience & Tunnel Lights',
-    category: 'lighting',
-    categoryLabel: 'Lighting & Ambience',
-    videoSrc: '/videos/lighting-ambience.mp4',
-    poster: 'https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=1200&q=80',
-    duration: 'Night Highlights',
-    description: 'Magical 100-foot fairy light pathway tunnel and synchronized LED stage lighting creating a fairy-tale evening atmosphere.',
+    title: 'Grand Wedding Celebration Reel & Festive Moments',
+    category: 'wedding',
+    categoryLabel: 'Celebration Reel',
+    videoSrc: '/videos/celebration-reel.mp4',
+    duration: 'Celebration Reel',
+    description: 'Experience the splendor, joyful gatherings, dynamic banquet counters, and magnificent festive moments captured live at our grand wedding celebrations.',
   },
 ];

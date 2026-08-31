@@ -85,7 +85,7 @@ export interface VideoItem {
   videoSrc?: string;
   youtubeId?: string;
   youtubeUrl?: string;
-  poster: string;
+  poster?: string;
   duration?: string;
   description: string;
 }
