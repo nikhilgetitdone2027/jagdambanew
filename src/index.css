@@ -1,0 +1,169 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: "Playfair Display", Georgia, serif;
+    --font-cinzel: "Cinzel", "Playfair Display", serif;
+    --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+
+    /* Theme CSS Variables - defaulted to Obsidian & 24K Liquid Gold (Dark Luxury) */
+    --theme-primary: #0B0B0E;
+    --theme-primary-dark: #050507;
+    --theme-primary-surface: #14141B;
+    --theme-primary-card: #1C1C26;
+    --theme-primary-hover: #2A2A38;
+    --theme-accent: #F5BD47;
+    --theme-accent-light: #FFF3D1;
+    --theme-accent-dark: #C99318;
+    --theme-accent-glow: rgba(245, 189, 71, 0.4);
+    --theme-canvas-bg: #0B0B0E;
+    --theme-canvas-surface: #14141B;
+    --theme-text-dark: #F4F4F8;
+    --theme-text-muted: #A2A2B6;
+  }
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-cinzel {
+  font-family: var(--font-cinzel);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+/* Custom Luxury Dynamic Gradients & Shimmers */
+.gold-gradient-text {
+  background: linear-gradient(135deg, var(--theme-accent-light) 0%, var(--theme-accent) 50%, var(--theme-accent-dark) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-border-gradient {
+  border-image: linear-gradient(to right, var(--theme-accent-dark), var(--theme-accent-light), var(--theme-accent), var(--theme-accent-dark)) 1;
+}
+
+/* Theme Helper Classes for Dynamic Variables */
+.bg-regal-blue,
+.bg-theme-primary {
+  background-color: var(--theme-primary) !important;
+}
+
+.bg-navy-900,
+.bg-theme-primary-surface {
+  background-color: var(--theme-primary-surface) !important;
+}
+
+.bg-navy-800,
+.bg-theme-primary-card {
+  background-color: var(--theme-primary-card) !important;
+}
+
+.bg-navy-700,
+.bg-theme-primary-hover {
+  background-color: var(--theme-primary-hover) !important;
+}
+
+.bg-theme-primary-dark {
+  background-color: var(--theme-primary-dark) !important;
+}
+
+.bg-theme-accent {
+  background-color: var(--theme-accent) !important;
+}
+
+.bg-theme-accent-light {
+  background-color: var(--theme-accent-light) !important;
+}
+
+.bg-theme-canvas {
+  background-color: var(--theme-canvas-bg) !important;
+}
+
+.text-gold-400,
+.text-gold-500,
+.text-theme-accent {
+  color: var(--theme-accent) !important;
+}
+
+.text-gold-300,
+.text-theme-accent-light {
+  color: var(--theme-accent-light) !important;
+}
+
+.text-theme-primary {
+  color: var(--theme-primary) !important;
+}
+
+.text-theme-dark {
+  color: var(--theme-text-dark) !important;
+}
+
+.text-theme-muted {
+  color: var(--theme-text-muted) !important;
+}
+
+.border-gold-500\/30 {
+  border-color: color-mix(in srgb, var(--theme-accent) 30%, transparent) !important;
+}
+
+.border-gold-500\/40 {
+  border-color: color-mix(in srgb, var(--theme-accent) 40%, transparent) !important;
+}
+
+.border-gold-500\/50,
+.border-theme-accent {
+  border-color: var(--theme-accent) !important;
+}
+
+.border-theme-accent-light {
+  border-color: var(--theme-accent-light) !important;
+}
+
+/* Sophisticated Dark Radial Dot Pattern */
+.dark-dot-pattern {
+  background-image: radial-gradient(circle at 2px 2px, var(--theme-accent) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Indian Ornamental Border Accent Utility */
+.ornamental-divider {
+  background-image: radial-gradient(circle at center, var(--theme-accent) 2px, transparent 2.5px);
+  background-size: 16px 16px;
+}
+
+/* Smooth custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--theme-primary-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--theme-accent);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--theme-accent-light);
+}
+
+/* Ambient Pulse for Selected Templates */
+@keyframes goldPulse {
+  0%, 100% {
+    box-shadow: 0 0 15px var(--theme-accent-glow), inset 0 0 10px var(--theme-accent-glow);
+  }
+  50% {
+    box-shadow: 0 0 25px var(--theme-accent), inset 0 0 15px var(--theme-accent);
+  }
+}
+
+.animate-gold-pulse {
+  animation: goldPulse 3s ease-in-out infinite;
+}

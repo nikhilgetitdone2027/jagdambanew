@@ -1,0 +1,6 @@
+{
+  "name": "Jagadamba Caterer & Event Planner",
+  "description": "Luxurious, premium Indian catering and event-planning services for weddings, receptions, parties, and celebrations in Dhanbad, Jharkhand and beyond.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

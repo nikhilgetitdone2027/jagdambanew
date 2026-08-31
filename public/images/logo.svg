@@ -1,0 +1,46 @@
+<svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="monogramGradient" x1="10%" y1="90%" x2="90%" y2="10%">
+      <stop offset="0%" stop-color="#F97316" />
+      <stop offset="35%" stop-color="#E11D48" />
+      <stop offset="70%" stop-color="#C026D3" />
+      <stop offset="100%" stop-color="#9333EA" />
+    </linearGradient>
+    <linearGradient id="goldBandGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D97706" />
+      <stop offset="50%" stop-color="#FDE047" />
+      <stop offset="100%" stop-color="#B45309" />
+    </linearGradient>
+    <filter id="hatShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000000" flood-opacity="0.4" />
+    </filter>
+    <path id="textArcUpper" d="M 42 150 A 108 108 0 1 1 258 150 A 108 108 0 1 1 42 150" />
+  </defs>
+  <circle cx="150" cy="150" r="146" fill="#1C1C1E" stroke="#334155" stroke-width="2" />
+  <circle cx="150" cy="150" r="141" fill="none" stroke="#475569" stroke-width="1" stroke-dasharray="3 3" opacity="0.6" />
+  <text fill="#FFFFFF" font-family="'Cinzel', 'Playfair Display', 'Arial Black', sans-serif" font-weight="900" font-size="18.5" letter-spacing="4.8">
+    <textPath href="#textArcUpper" startOffset="50%" text-anchor="middle">
+      ★ JAGADAMBA CATERER &amp; EVENT PLANNER ★
+    </textPath>
+  </text>
+  <g transform="translate(0, -2)">
+    <g filter="url(#hatShadow)" transform="translate(150, 100) scale(0.68) translate(-150, -100)">
+      <path d="M108 92 C102 75 110 52 128 48 C135 32 155 30 168 40 C178 30 200 34 205 50 C218 55 224 75 218 92 Z" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2.5" />
+      <path d="M136 50 Q138 72 135 90" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round" fill="none" />
+      <path d="M158 42 Q156 68 155 90" stroke="#94A3B8" stroke-width="2.2" stroke-linecap="round" fill="none" />
+      <path d="M178 44 Q176 68 174 90" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round" fill="none" />
+      <path d="M198 52 Q194 72 190 90" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round" fill="none" />
+      <path d="M112 92 C140 98 170 98 214 92 L211 106 C170 112 140 112 115 106 Z" fill="#991B1B" stroke="url(#goldBandGrad)" stroke-width="2" />
+      <line x1="130" y1="94" x2="132" y2="108" stroke="url(#goldBandGrad)" stroke-width="1.5" />
+      <line x1="150" y1="95" x2="150" y2="110" stroke="url(#goldBandGrad)" stroke-width="1.5" />
+      <line x1="170" y1="95" x2="168" y2="110" stroke="url(#goldBandGrad)" stroke-width="1.5" />
+      <line x1="190" y1="94" x2="186" y2="108" stroke="url(#goldBandGrad)" stroke-width="1.5" />
+    </g>
+    <g transform="translate(150, 185) scale(0.92) translate(-150, -185)">
+      <path d="M122 136 L144 136 L144 186 C144 206 130 220 108 214 C98 211 92 202 96 195 C100 188 110 194 116 196 C124 198 130 192 130 182 L130 136 Z" fill="url(#monogramGradient)" />
+      <path d="M144 136 L175 136 C198 136 215 152 215 174 C215 196 198 212 175 212 L144 212 Z M158 150 L158 198 L174 198 C188 198 199 188 199 174 C199 160 188 150 174 150 Z" fill="url(#monogramGradient)" />
+      <path d="M84 188 C105 186 128 174 150 162 C168 152 188 148 226 158 C204 168 184 172 165 176 C142 181 118 198 84 188 Z" fill="url(#monogramGradient)" opacity="0.95" />
+      <path d="M118 136 C138 132 170 132 195 136 L195 142 C170 138 138 138 118 142 Z" fill="url(#monogramGradient)" />
+    </g>
+  </g>
+</svg>
